@@ -19,27 +19,8 @@
 
 ## Architecture cible
 
-```
-   Utilisateur
-       │
-       ▼
- ┌────────────────────────┐
- │   Application Flask    │   crée des spans
- │       (port 5000)      │   envoie en OTLP/HTTP
- └───────────┬────────────┘
-             ▼
- ┌────────────────────────┐
- │ OpenTelemetry Collector│   reçoit · batch · exporte
- │       (port 4318)      │
- └───────────┬────────────┘
-             ▼
- ┌────────────────────────┐
- │         Jaeger         │   stocke et visualise
- │   (UI sur port 16686)  │
- └───────────┬────────────┘
-             ▼
-       Interface Web
-```
+<img width="1661" height="947" alt="ChatGPT Image 21 mai 2026, 14_44_58" src="https://github.com/user-attachments/assets/7c37163e-6c45-481b-8e21-063aa4d8aedc" />
+
 
 > OpenTelemetry est au monitoring ce que TCP/IP est au réseau : un langage commun, neutre et extensible pour observer tout type de système.
 
